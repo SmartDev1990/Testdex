@@ -1,0 +1,136 @@
+import { ChainId, RICE, Token } from '@smartdev1990/crona-sdk'
+import { Ifo } from './types'
+import { BETA, USDC } from './../config/tokens'
+import tokens from './tokens'
+
+// UPCOMING - 0xD1e0Da69F2Ee9B7d3602DB9F41F37beE2d99F176
+// LIVE - 0x37B9227d8154870481171C4C910884e82903992f
+// FINISH -
+const ifos: Ifo[] = [
+  {
+    id: 'mifo',
+    address: {
+      [ChainId.BRISE]: '0xA5F673915F10276999Ab24266bF5E0846344962b'
+    },
+    isActive: true,
+    name: 'ARCANE',
+    poolBasic: {
+      saleAmount: '1,350,000',
+      raiseAmount: '$202,500',
+      cronaToBurn: '$90,000',
+      distributionRatio: 0.3,
+      raiseToken: RICE,
+    },
+    poolUnlimited: {
+      saleAmount: '2,650,000',
+      raiseAmount: '$397,500',
+      cronaToBurn: '$110,000',
+      distributionRatio: 0.7,
+      raiseToken: USDC,
+    },
+    // raiseToken: USDC,
+    offerToken: {
+      [ChainId.BRISE]: new Token(ChainId.BRISE, '0x289B8f552c9fD66f9cEA35B193F7ca73ae24A5d5', 18, 'ARC', 'ARCANE'),
+    },
+    releaseTimestamp: 1646922000,
+    claimDelayTime: 10800, //delay 3 hours
+    veCronaCheckPoint: 1646813700, //start time
+
+    // TESTNET
+    // releaseTimestamp: 1644667500,
+    // claimDelayTime: 900, //delay 3 hours 1644760800
+    // veCronaCheckPoint: 1644665700, //start time
+
+    campaignId: '511160000',
+    twitterUrl: 'https://twitter.com/thearcanefi',
+    telegramUrl: 'https://t.me/arcanenftfinancial',
+    discordUrl: 'https://discord.gg/ajesZGddzV',
+    articleUrl: 'https://arcanenft.financial/',
+    description:
+      'ARCANE is the premier gaming NFT Token on MAINNET that will allow you to control an infinite supply of Protonium. Gather Protonium and become the most powerful Arcane of all time. ARCANE has one purpose: Unite the cybertornian army to protect the MAINNET ecosystem.',
+    tokenOfferingPrice: 0.15,
+    version: 2,
+  },
+  {
+    id: 'duet',
+    address: {
+      [ChainId.BRISE]: '0xDF24BE326af4c1fb888f567f41D9a981A4752cf1',
+    },
+    isActive: false,
+    name: 'DUET',
+    poolBasic: {
+      saleAmount: '1,200,000 DUET',
+      raiseAmount: '$360,000',
+      cronaToBurn: '$0',
+      distributionRatio: 0.2,
+      raiseToken: RICE,
+    },
+    poolUnlimited: {
+      saleAmount: '4,800,000 DUET',
+      raiseAmount: '$1,440,000',
+      cronaToBurn: '$0',
+      distributionRatio: 0.8,
+      raiseToken: USDC,
+    },
+    offerToken: {
+      [ChainId.BRISE]: new Token(
+        ChainId.BRISE,
+        '0x95EE03e1e2C5c4877f9A298F1C0D6c98698FAB7B',
+        18,
+        'DUET',
+        'Duet Governance Token'
+      ),
+    },
+    releaseTimestamp: 1646922000,
+    claimDelayTime: 10800, //delay 3 hours
+    veCronaCheckPoint: 1646813700, //start time
+
+    campaignId: '511190000',
+    twitterUrl: 'https://twitter.com/duetprotocol',
+    telegramUrl: 'https://t.me/duetprotocol',
+    articleUrl: 'https://pancakeswap.finance/voting/proposal/QmXwoYYd8rkahVbxiGKsTa4rYRRFWPxhRGAHy3hVwK3Q2z',
+    description:
+      'DUET Protocol is a multi-chain synthetic assets ecosystem, enabling pegged assets from various markets – from individual stocks, to indexes, ETFs, and commodities.',
+    tokenOfferingPrice: 0.3,
+    version: 2,
+  },
+  {
+    id: 'era',
+    address: {
+      [ChainId.BRISE]: '0x527201a43f8da24ce9b7c21744a0706942f41fa3',
+    },
+    isActive: false,
+    name: 'ERA (Game of Truth)',
+    poolBasic: {
+      saleAmount: '4,000,000 ERA',
+      raiseAmount: '$360,000',
+      cronaToBurn: '$0',
+      distributionRatio: 0.2,
+      raiseToken: RICE,
+    },
+    poolUnlimited: {
+      saleAmount: '16,000,000 ERA',
+      raiseAmount: '$1,440,000',
+      cronaToBurn: '$0',
+      distributionRatio: 0.8,
+      raiseToken: USDC,
+    },
+    offerToken: {
+      [ChainId.BRISE]: new Token(ChainId.BRISE, '0x6f9F0c4ad9Af7EbD61Ac5A1D4e0F2227F7B0E5f9', 18, 'ERA', 'Era Token'),
+    },
+    releaseTimestamp: 1646922000,
+    claimDelayTime: 10800, //delay 3 hours
+    veCronaCheckPoint: 1646813700, //start time
+
+    campaignId: '511180000',
+    twitterUrl: 'https://twitter.com/Era7_official',
+    telegramUrl: 'https://t.me/Era7_Official',
+    articleUrl: 'https://pancakeswap.finance/voting/proposal/QmTfN1SKnFidF6XCDcpga7zAf69mFfhb26Zy9b85dYskxW',
+    description:
+      'Drawing from their experience in traditional games such as Awakening of Dragon, Era7: Game of Truth combines elements of DeFi, NFTs, and Trading Cards into a play-to-earn game steeped in mythology and magic.',
+    tokenOfferingPrice: 0.09,
+    version: 2,
+  },
+]
+
+export default ifos
